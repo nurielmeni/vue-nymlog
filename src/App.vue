@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Nav name="NYMLogger" logo="/img/nymLogger.png" />
+    <Console />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Nav from "./components/nav/Nav.vue";
+import Nav from "./components/console/Console.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Nav,
+    Console
   }
 };
 </script>
 
 <style>
+body {
+  padding: 0;
+  margin: 0;
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+  font-family: monospace;
+  background-color: #262e26;
+  color: #dbfbd3;
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+}
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

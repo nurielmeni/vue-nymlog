@@ -1,0 +1,34 @@
+section.console {
+  height: calc(100vh - 300px);
+  background-color: #080808;
+  overflow: auto;
+  padding: 5px;
+  color: #ddff98;
+}
+
+section.console p.stacktrace {
+  margin-left: 10px;
+  background-color: #272727;
+  padding: 3px;
+  margin-top: -8px;
+}
+
+section.console span.timestamp {
+  font-style: oblique;
+}
+
+section.console span.message {
+  color: #d3d3d3;
+}
+
+section.console span.level.debug {
+  color: orange;
+}
+
+section.console span.level.info {
+  color: #6bb0ff;
+}
+
+section.console span.level.error {
+  color: #ff0000;
+}
