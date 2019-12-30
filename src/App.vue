@@ -7,7 +7,7 @@
 
 <script>
 import Nav from "./components/nav/Nav.vue";
-import Nav from "./components/console/Console.vue";
+import Console from "./components/console/Console.vue";
 
 export default {
   name: "app",
@@ -29,8 +29,5 @@ body {
   min-height: 100vh;
   height: 100%;
   width: 100vw;
-}
-
-#app {
 }
 </style>

@@ -1,10 +1,30 @@
 <template>
-  <section class="console"></section>
+  <section class="console">
+    <h1>Console</h1>
+    <ul :id="name">
+      <li v-for="(entry, index) in entries" :key="index">
+        <ConsoleEntry
+          :timestamp="entry.timestamp"
+          :logger="entry.logger"
+          :level="entry.level"
+          :message="entry.message"
+        />
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script>
+import ConsoleEntry from "../consoleEntry/ConsoleEntry.vue";
+const socket = io();
+
 export default {
-  props: {},
+  components: {
+    ConsoleEntry
+  },
+  props: {
+    name: String
+  },
   data() {
     return {
       entries: [
