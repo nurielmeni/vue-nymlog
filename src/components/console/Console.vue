@@ -16,7 +16,6 @@
 
 <script>
 import ConsoleEntry from "../consoleEntry/ConsoleEntry.vue";
-const socket = io();
 
 export default {
   components: {
@@ -27,6 +26,7 @@ export default {
   },
   data() {
     return {
+      isConnected: false,
       entries: [
         {
           _id: "5e0322a4009c3a0011496f6a",
@@ -38,6 +38,21 @@ export default {
         }
       ]
     };
+  },
+  sockets: {
+    connect() {
+      // Fired when the socket connects.
+      this.isConnected = true;
+    },
+
+    disconnect() {
+      this.isConnected = false;
+    },
+
+    // Fired when the server sends something on the "messageChannel" channel.
+    updateConsole(data) {
+      this.entries.push(data);
+    }
   },
   methods: {}
 };
