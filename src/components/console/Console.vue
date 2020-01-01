@@ -1,8 +1,11 @@
 <template>
   <section class="console">
-    <h1>Console</h1>
+    <div id="actions">
+      <filter-ms name="level" @valueChanged="setFilterLevel" />
+    </div>
+
     <ul :id="name">
-      <li v-for="(entry, index) in entries" :key="index">
+      <li v-for="(entry, index) in filteredEntries" :key="index">
         <ConsoleEntry
           :timestamp="entry.timestamp"
           :logger="entry.logger"
@@ -16,10 +19,12 @@
 
 <script>
 import ConsoleEntry from "../consoleEntry/ConsoleEntry.vue";
+import FilterMs from "../filterMs/FilterMs.vue";
 
 export default {
   components: {
-    ConsoleEntry
+    ConsoleEntry,
+    FilterMs
   },
   props: {
     name: String
@@ -36,7 +41,8 @@ export default {
           message: "Testing...",
           stacktrace: ""
         }
-      ]
+      ],
+      filterLevel: []
     };
   },
   sockets: {
@@ -54,7 +60,20 @@ export default {
       this.entries.push(data);
     }
   },
-  methods: {}
+  methods: {
+    setFilterLevel(value) {
+      this.filterLevel = value;
+    }
+  },
+  computed: {
+    filteredEntries() {
+      console.log(typeof this.filterLevel, this.filterLevel);
+      this.filterLevel.forEach(element => {
+        console.log(element);
+      });
+      return this.entries.filter(f => this.filterLevel.includes(f.level));
+    }
+  }
 };
 </script>
 

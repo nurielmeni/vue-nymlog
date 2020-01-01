@@ -2,7 +2,6 @@ section.console {
   height: calc(100vh - 300px);
   background-color: #080808;
   overflow: auto;
-  padding: 5px;
   color: #ddff98;
 }
 
@@ -35,4 +34,15 @@ section.console span.level.error {
 
 ul {
   list-style-type: none;
+}
+
+#actions {
+  background-color: rgb(81, 194, 119);
+  color: #080808;
+  font-size: 14px;
+  padding: 10px;
+}
+
+#actions > #level {
+  width: 300px;
 }
