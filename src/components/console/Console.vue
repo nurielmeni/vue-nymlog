@@ -67,10 +67,6 @@ export default {
   },
   computed: {
     filteredEntries() {
-      console.log(typeof this.filterLevel, this.filterLevel);
-      this.filterLevel.forEach(element => {
-        console.log(element);
-      });
       return this.entries.filter(f => this.filterLevel.includes(f.level));
     }
   }
