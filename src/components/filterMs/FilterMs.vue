@@ -28,7 +28,7 @@ export default {
     return {
       isConnected: false,
       value: [],
-      options: ["Info", "Debug", "Error", "Warning"]
+      options: ["info", "debug", "error", "warning"]
     };
   },
   methods: {
