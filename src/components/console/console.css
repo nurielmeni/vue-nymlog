@@ -2,12 +2,12 @@ section.console {
   height: calc(100vh - 300px);
   background-color: #23292d;
   overflow: auto;
-  color: #ddff98;
+  color: #c7dbde;
 }
 
 section.console p.stacktrace {
   margin-left: 10px;
-  background-color: #272727;
+  background-color: #21383e;
   padding: 3px;
   margin-top: -8px;
 }
@@ -37,7 +37,7 @@ ul {
 }
 
 #actions {
-  background-color: #262e26;
+  background-color: #213135;
   color: #c7c7c7;
   font-size: 14px;
   padding: 10px;

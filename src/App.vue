@@ -24,7 +24,7 @@ body {
   margin: 0;
   /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
   font-family: monospace;
-  background-color: #262e26;
+  background-color: #213135;
   color: #dbfbd3;
   min-height: 100vh;
   height: 100%;
