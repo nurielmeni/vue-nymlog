@@ -1,7 +1,7 @@
 nav {
   width: 100vw;
-  background-color: #126d11;
-  color: #262e26;
+  background-color: #18435a;
+  color: #a8b9c5;
 }
 
 div.navbar-default {
@@ -34,13 +34,13 @@ nav li {
 nav li a {
   text-decoration: none;
 
-  color: black;
+  color: #a8b9c5;
   line-height: 6.7vh;
   padding: 1.7vh;
 }
 
 nav li a:hover {
-  background-color: #25ca23;
+  background-color: #0c2f44;
 }
 
 @media only screen and (max-width: 600px) {

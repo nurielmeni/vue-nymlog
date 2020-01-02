@@ -1,6 +1,6 @@
 section.console {
   height: calc(100vh - 300px);
-  background-color: #080808;
+  background-color: #23292d;
   overflow: auto;
   color: #ddff98;
 }
