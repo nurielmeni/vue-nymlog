@@ -19,11 +19,12 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap");
 body {
   padding: 0;
   margin: 0;
   /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
-  font-family: monospace;
+  font-family: "Inconsolata", monospace;
   background-color: #213135;
   color: #dbfbd3;
   min-height: 100vh;
