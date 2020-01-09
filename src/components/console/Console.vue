@@ -58,7 +58,7 @@ export default {
 
     // Fired when the server sends something on the "messageChannel" channel.
     updateConsole(data) {
-      this.entries.push(data);
+      this.entries.unshift(data);
     }
   },
   methods: {
