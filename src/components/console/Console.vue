@@ -7,6 +7,7 @@
     <ul :id="name">
       <li v-for="(entry, index) in filteredEntries" :key="index">
         <ConsoleEntry
+          :screen="entry.screen"
           :timestamp="entry.timestamp"
           :logger="entry.logger"
           :level="entry.level"
