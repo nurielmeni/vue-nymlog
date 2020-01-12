@@ -7,6 +7,7 @@
     <ul :id="name">
       <li v-for="(entry, index) in filteredEntries" :key="index">
         <ConsoleEntry
+          :screen="entry.screen"
           :timestamp="entry.timestamp"
           :logger="entry.logger"
           :level="entry.level"
@@ -57,7 +58,7 @@ export default {
 
     // Fired when the server sends something on the "messageChannel" channel.
     updateConsole(data) {
-      this.entries.push(data);
+      this.entries.unshift(data);
     }
   },
   methods: {

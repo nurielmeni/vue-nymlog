@@ -1,5 +1,6 @@
 <template>
   <div class="console-entry">
+    <span class="screen">{{ screen }}</span>
     <span class="timestamp">{{ timestamp }}</span>
     <span class="logger">{{ logger }}</span>
     <span :class="level.toLowerCase()">[{{ level }}]</span>
@@ -10,7 +11,7 @@
 <script>
 export default {
   props: {
-    id: String,
+    screen: String,
     message: String,
     level: String,
     logger: String,
@@ -26,6 +27,9 @@ export default {
 <style scoped>
 div.console-entry > span {
   padding-right: 6px;
+}
+div.console-entry > span.screen {
+  background-color: #34a7ff;
 }
 div.console-entry > span.info {
   color: #18aac3;
