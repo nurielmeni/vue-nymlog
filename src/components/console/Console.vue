@@ -4,7 +4,7 @@
       <filter-ms name="level" @valueChanged="setFilterLevel" />
       <div class="screen-select">
         <label>Screen</label>
-        <input type="number" v-model="screen" @change="changeScreen" :id="screen" />
+        <input type="number" v-model="screen" @change="changeScreen" id="screen" />
       </div>
     </div>
 
