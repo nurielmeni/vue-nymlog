@@ -72,7 +72,6 @@ export default {
     },
     // $socket is socket.io-client instance
     changeScreen() {
-      console.log("changing screen ", this.screen);
       this.$socket.emit("screenRoom", this.screen);
     }
   },
