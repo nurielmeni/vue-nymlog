@@ -2,6 +2,10 @@
   <section class="console">
     <div id="actions">
       <filter-ms name="level" @valueChanged="setFilterLevel" />
+      <div class="screen-select">
+        <label>Screen</label>
+        <input type="number" v-model="screen" @change="changeScreen" :id="screen" />
+      </div>
     </div>
 
     <ul :id="name">
@@ -33,6 +37,7 @@ export default {
   data() {
     return {
       isConnected: false,
+      screen: null,
       entries: [
         {
           _id: "5e0322a4009c3a0011496f6a",
@@ -64,6 +69,11 @@ export default {
   methods: {
     setFilterLevel(value) {
       this.filterLevel = value;
+    },
+    // $socket is socket.io-client instance
+    changeScreen() {
+      console.log("changing screen ", this.screen);
+      this.$socket.emit("screenRoom", this.screen);
     }
   },
   computed: {

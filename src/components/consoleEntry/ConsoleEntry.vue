@@ -11,7 +11,7 @@
 <script>
 export default {
   props: {
-    screen: String,
+    screen: Number,
     message: String,
     level: String,
     logger: String,
@@ -26,10 +26,16 @@ export default {
 </script>
 <style scoped>
 div.console-entry > span {
-  padding-right: 6px;
+  padding-right: 4px;
+  font-size: 14px;
 }
 div.console-entry > span.screen {
   background-color: #34a7ff;
+  border: 1px solid #23292d;
+  padding: 0 4px;
+  text-align: right;
+  border-radius: 6px;
+  margin-right: 4px;
 }
 div.console-entry > span.info {
   color: #18aac3;
