@@ -3,7 +3,7 @@ import App from "./App.vue";
 import VueSocketIO from "vue-socket.io";
 import "./registerServiceWorker";
 
-const serverUrl = "https://logs.nymedia.co.il";
+const serverUrl = process.env.VUE_APP_LOG_SERVER;
 
 Vue.config.productionTip = false;
 Vue.use(
