@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.c22c0ac04499682db85b0b914cdc7503.js"
+  "/precache-manifest.f612c1e5a470509f95967b07cd2caab1.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "veu-nymlog"});
